@@ -21,4 +21,5 @@
 15. Try to inject a string variable, check note #4 in AppModule and MainActivity
 16. To prevent duplication, if you provide a same data type, in this case we have 2 provide that return string, we can use @Named annotation, see note #5
 17. Also use @Named annotation when we called the injection
-18. 
+
+18. Try to inject with a context, use see EngineWithContext file, and the difference declaration on AppModule, note #6

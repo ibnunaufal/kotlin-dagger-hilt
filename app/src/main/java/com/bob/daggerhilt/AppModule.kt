@@ -1,8 +1,10 @@
 package com.bob.daggerhilt
 
+import android.content.Context
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Named
 import javax.inject.Singleton
@@ -15,6 +17,15 @@ object AppModule {
     @Provides
     fun provideEnginge(): Engine {
         return Engine()
+    }
+
+//    Note #6 inject with context
+    @Singleton
+    @Provides
+    fun provideEngingeWithContext(
+        @ApplicationContext context: Context
+    ): EngineWithContext {
+        return EngineWithContext(context)
     }
 
 //    Note #4

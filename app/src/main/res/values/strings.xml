@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Dagger Hilt</string>
+    <string name="injection">engine started with context</string>
 </resources>
