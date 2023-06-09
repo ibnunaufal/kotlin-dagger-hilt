@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+import javax.inject.Named
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -11,6 +12,16 @@ class MainActivity : AppCompatActivity() {
 //    Note #2
     @Inject
     lateinit var engine: Engine
+
+//    Note #4
+    @Inject
+    @Named("string1")
+    lateinit var injectedString: String
+
+//    Note #5
+    @Inject
+    @Named("string2")
+    lateinit var otherInjectedString: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,5 +35,11 @@ class MainActivity : AppCompatActivity() {
 
 //        Note #3
         engine.startEngine()
+
+//        Note #4
+        println("injectedString = $injectedString")
+
+//        Note #5
+        println("otherInjectedString = $otherInjectedString")
     }
 }
