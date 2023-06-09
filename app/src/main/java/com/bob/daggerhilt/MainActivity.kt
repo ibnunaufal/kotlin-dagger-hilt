@@ -17,6 +17,10 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var engineWithContext: EngineWithContext
 
+//    Note #7
+    @Inject
+    lateinit var engineWithContextNestedInjection: EngineWithContextNestedInjection
+
 //    Note #4
     @Inject
     @Named("string1")
@@ -48,5 +52,8 @@ class MainActivity : AppCompatActivity() {
 
 //        Note #6
         engineWithContext.startEngineWithContext()
+
+//        Note #7
+        engineWithContextNestedInjection.startEngineWithContextNestedInjection()
     }
 }

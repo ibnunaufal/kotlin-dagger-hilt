@@ -28,6 +28,22 @@ object AppModule {
         return EngineWithContext(context)
     }
 
+//    Note #7 inject with context
+    @Singleton
+    @Provides
+    fun provideEngingeWithContextNestedInjection(
+        @ApplicationContext context: Context,
+        @Named("owner") owner: String
+    ): EngineWithContextNestedInjection {
+        return EngineWithContextNestedInjection(context, owner)
+    }
+
+//    Note #7
+    @Singleton
+    @Provides
+    @Named("owner")
+    fun provideOwner() = "Nopalll"
+
 //    Note #4
     @Singleton
     @Provides

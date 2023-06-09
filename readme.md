@@ -23,3 +23,5 @@
 17. Also use @Named annotation when we called the injection
 
 18. Try to inject with a context, use see EngineWithContext file, and the difference declaration on AppModule, note #6
+
+19. Try to nest the injection, see EngineWithContextNestedInjection file, see note #7
