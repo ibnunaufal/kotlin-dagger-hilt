@@ -9,4 +9,12 @@
    > @InstallIn(Singleton)  = used as long as the app was opened 
    > @InstallIn(ActivityComponent) = used only when activity opened or actived
 7. Create class and its function that will be injected, Named as Engine class & startEngine function
-8. Normally, without 
+8. Normally, without injection without hilt will looks like that, see note #1 on MainActivity
+
+9. With hilt, we need to create a provider inside the AppModule to provide the function or variable that will be injected
+10. Add @Singleton annotation to the provide function, used to create the injection only once, not when we needed(memory leak)
+11. Add @Provides annotation to declare that its function was a function that will be injected
+12. In MainActivity, we'll try to call the injection, declare a lateinit variable first, see note #2
+13. Dont forget to add @Inject annotation, used to declare that its function was a place to get the injection
+14. Try to use the variable that was injected, see note #3
+15. 
